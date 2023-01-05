@@ -1,0 +1,192 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11788533834,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Normal login",
+        "description": "",
+        "id": "feature-check-out;normal-login",
+        "after": [
+          {
+            "result": {
+              "duration": 283000209,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 355250583,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User open the website sauce demo",
+            "match": {
+              "location": "LoginSteps.verifyDisplay()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3329677375,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User input \"standard_user\" as userName and input \"secret_sauce\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5089763750,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User pick item Sauce Labs Backpack",
+            "match": {
+              "location": "PurchaseSteps.clickItemBasket1()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7095890000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Filter Product and Add Product To Cart",
+        "description": "",
+        "id": "feature-check-out;filter-product-and-add-product-to-cart",
+        "after": [
+          {
+            "result": {
+              "duration": 126705542,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 285186750,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User open the website sauce demo",
+            "match": {
+              "location": "LoginSteps.verifyDisplay()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3224331791,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User input \"standard_user\" as userName and input \"secret_sauce\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 455044833,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User select \"Price (low to high)\" to Filter Product",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Price (low to high)",
+                  "offset": 13
+                }
+              ],
+              "location": "PurchaseSteps.filterProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5073151250,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User pick item Sauce Labs Backpack",
+            "match": {
+              "location": "PurchaseSteps.clickItemBasket1()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Feature check out",
+    "description": "",
+    "id": "feature-check-out",
+    "keyword": "Feature",
+    "uri": "features/CheckOut.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@CheckOut"
+      }
+    ]
+  }
+]
