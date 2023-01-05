@@ -22,6 +22,9 @@ public class LoginPage {
     @FindBy(id = "login-button")
     private WebElement btnLogin;
 
+    @FindBy(xpath = "//h3")
+    private WebElement errorMessage;
+
     public void setUserName(String user){
         userName.sendKeys(user);
     }
@@ -37,5 +40,9 @@ public class LoginPage {
     public boolean isDisplayed(){
         userName.isDisplayed();
         return true;
+    }
+
+    public String getErrorText(){
+        return errorMessage.getText();
     }
 }
