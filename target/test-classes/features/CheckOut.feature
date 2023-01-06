@@ -18,6 +18,13 @@
       When User input "standard_user" as userName and input "secret_sauce" as password
       Then User already on landing page
       And User sort product by "Name (Z to A)" as sortBy
+#      And User checkout "Sauce Labs Backpack" as product to cart
+#      And User checkout "Test.allTheThings() T-Shirt (Red)" as product to cart
+#      And User click icon cart
       And User checkout "Sauce Labs Backpack,Test.allTheThings() T-Shirt (Red)" as products to cart
       And User verify that "Sauce Labs Backpack,Test.allTheThings() T-Shirt (Red)" as products in a list
       And User remove  "Test.allTheThings() T-Shirt (Red)" as products in a list
+#      click button checkout
+#      isi data
+#      click button Continue
+

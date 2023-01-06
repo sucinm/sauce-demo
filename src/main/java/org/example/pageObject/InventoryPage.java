@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
 public class InventoryPage {
     public static WebDriver driver;
 
@@ -30,9 +32,6 @@ public class InventoryPage {
     @FindBy(className = "inventory_list")
     private WebElement productContainer;
 
-//    @FindBy(xpath = "//button[.='Add to cart']")
-//    private WebElement buttonAddToCart;
-
     public void clickBasket1(){
         basketItem1.click();
     }
@@ -55,11 +54,10 @@ public class InventoryPage {
         System.out.println("check out product");
         for (String productName:
                 listOfProduct) {
-
-            System.out.println(productName);
-            productContainer.findElement(By.xpath("//div[.='"+ productName +"']")).findElement(By.xpath("//button[.='Add to cart']")).click();
+            String xPathSelectedProduct =  "//button[@id='add-to-cart-"+ productName.toLowerCase().replace(" ","-") +"']";
+            selectedProduct = productContainer.findElement(By.xpath(xPathSelectedProduct));
+            selectedProduct.click();
         }
         Thread.sleep(5000);
-
     }
 }

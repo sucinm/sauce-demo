@@ -46,8 +46,9 @@ public class CheckOutPage {
         WebElement selectedProduct;
         for (String productName:
                 listOfProduct) {
-            selectedProduct = cartContentsContainer.findElement(By.xpath("//div[text()='"+ productName +"']"));
-            selectedProduct.findElement(By.xpath("//button[.='Remove']")).click();
+            String xPathSelectedProduct = "//button[@id='remove-'"+productName.toLowerCase().replace(" ", "-")+"']";
+            selectedProduct = cartContentsContainer.findElement(By.xpath(xPathSelectedProduct));
+            selectedProduct.click();
         }
     }
 }

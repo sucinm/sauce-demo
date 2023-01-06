@@ -21,3 +21,7 @@
       And User checkout "Sauce Labs Backpack,Test.allTheThings() T-Shirt (Red)" as products to cart
       And User verify that "Sauce Labs Backpack,Test.allTheThings() T-Shirt (Red)" as products in a list
       And User remove  "Test.allTheThings() T-Shirt (Red)" as products in a list
+#      click button checkout
+#      isi data
+#      click button Continue
+
