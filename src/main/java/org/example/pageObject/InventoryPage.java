@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
-
 public class InventoryPage {
     public static WebDriver driver;
 
@@ -16,9 +14,6 @@ public class InventoryPage {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-
-    @FindBy(xpath = "//button[@id='add-to-cart-sauce-labs-backpack']")
-    private WebElement basketItem1;
 
     @FindBy(xpath = "//select[@class='product_sort_container']")
     private WebElement selectContainer;
@@ -32,9 +27,6 @@ public class InventoryPage {
     @FindBy(className = "inventory_list")
     private WebElement productContainer;
 
-    public void clickBasket1(){
-        basketItem1.click();
-    }
     public void sortProductBy(String sortBy){
         Select b = new Select (selectContainer);
         b.selectByVisibleText(sortBy);
@@ -48,16 +40,14 @@ public class InventoryPage {
         buttonCart.click();
     }
 
-    public void addToCart(String products) throws InterruptedException {
+    public void addToCart(String products) {
         String[] listOfProduct = products.split(",");
         WebElement selectedProduct;
-        System.out.println("check out product");
         for (String productName:
                 listOfProduct) {
             String xPathSelectedProduct =  "//button[@id='add-to-cart-"+ productName.toLowerCase().replace(" ","-") +"']";
             selectedProduct = productContainer.findElement(By.xpath(xPathSelectedProduct));
             selectedProduct.click();
         }
-        Thread.sleep(5000);
     }
 }

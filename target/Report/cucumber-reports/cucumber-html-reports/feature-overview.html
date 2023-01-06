@@ -51,7 +51,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                7,
+                25,
                 0,
                 0,
                 0,
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 7) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 25) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -107,7 +107,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                1,
+                3,
                 0
             ],
             backgroundColor: [
@@ -144,7 +144,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 3) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
                     }
                 }
@@ -233,7 +233,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>Project Name</td>
                           <td>1</td>
-                        <td>06 Jan 2023, 15:08</td>
+                        <td>06 Jan 2023, 22:44</td>
           </tr>
         </tbody>
       </table>
@@ -325,16 +325,16 @@ $(document).ready(function() {
           <tr>
         <td class="tagname"><a href="features-CheckOut-feature.html">Feature check out</a></td>
         
-        <td  class="passed"    >1</td>
+        <td  class="passed"    >3</td>
         <td >0</td>
-        <td class="total">1</td>
-        <td      class="passed"    >7</td>
-        <td >0</td>
-        <td >0</td>
+        <td class="total">3</td>
+        <td      class="passed"    >25</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">7</td>
-        <td class="duration" data-value="20091422335">20s 091ms</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">25</td>
+        <td class="duration" data-value="14844703083">14s 844ms</td>
         <td class="passed">Passed</td>
       </tr>
       </tbody>
@@ -342,16 +342,16 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td>1</td>
-            <td>1</td>
+            <td>3</td>
       <td>0</td>
-      <td>1</td>
-      <td>7</td>
-      <td>0</td>
-      <td>0</td>
+      <td>3</td>
+      <td>25</td>
       <td>0</td>
       <td>0</td>
-      <td>7</td>
-      <td class="duration">20s 091ms</td>
+      <td>0</td>
+      <td>0</td>
+      <td>25</td>
+      <td class="duration">14s 844ms</td>
       <td></td>
     </tr>
     <tr>

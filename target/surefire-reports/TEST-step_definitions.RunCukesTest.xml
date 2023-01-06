@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="step_definitions.RunCukesTest" time="0.175" errors="0" skipped="0">
+<testsuite tests="28" failures="0" name="step_definitions.RunCukesTest" time="0.396" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -65,12 +65,32 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: Checkout product" name="Given User open the website sauce demo" time="0.035"/>
+  <testcase classname="Scenario: Add Product To Cart" name="Given User open the website sauce demo" time="0.013"/>
+  <testcase classname="Scenario: Add Product To Cart" name="When User input &quot;standard_user&quot; as userName and input &quot;secret_sauce&quot; as password" time="0"/>
+  <testcase classname="Scenario: Add Product To Cart" name="When User checkout &quot;Sauce Labs Backpack&quot; as products to cart" time="0"/>
+  <testcase classname="Scenario: Add Product To Cart" name="Then User already on checkout page" time="0.001"/>
+  <testcase classname="Scenario: Add Product To Cart" name="Scenario: Add Product To Cart" time="0.158"/>
+  <testcase classname="Scenario: Sort Product and Add Product To Cart" name="Given User open the website sauce demo" time="0"/>
+  <testcase classname="Scenario: Sort Product and Add Product To Cart" name="When User input &quot;standard_user&quot; as userName and input &quot;secret_sauce&quot; as password" time="0"/>
+  <testcase classname="Scenario: Sort Product and Add Product To Cart" name="Then User already on landing page" time="0.001"/>
+  <testcase classname="Scenario: Sort Product and Add Product To Cart" name="And User sort product by &quot;Price (low to high)&quot; as sortBy" time="0"/>
+  <testcase classname="Scenario: Sort Product and Add Product To Cart" name="When User checkout &quot;Sauce Labs Backpack&quot; as products to cart" time="0"/>
+  <testcase classname="Scenario: Sort Product and Add Product To Cart" name="Then User already on checkout page" time="0"/>
+  <testcase classname="Scenario: Sort Product and Add Product To Cart" name="Scenario: Sort Product and Add Product To Cart" time="0.11"/>
+  <testcase classname="Scenario: Checkout product" name="Given User open the website sauce demo" time="0"/>
   <testcase classname="Scenario: Checkout product" name="When User input &quot;standard_user&quot; as userName and input &quot;secret_sauce&quot; as password" time="0"/>
   <testcase classname="Scenario: Checkout product" name="Then User already on landing page" time="0"/>
-  <testcase classname="Scenario: Checkout product" name="And User sort product by &quot;Name (Z to A)&quot; as sortBy" time="0"/>
-  <testcase classname="Scenario: Checkout product" name="And User checkout &quot;Sauce Labs Backpack,Test.allTheThings() T-Shirt (Red)&quot; as products to cart" time="0"/>
-  <testcase classname="Scenario: Checkout product" name="And User verify that &quot;Sauce Labs Backpack,Test.allTheThings() T-Shirt (Red)&quot; as products in a list" time="0"/>
-  <testcase classname="Scenario: Checkout product" name="And User remove  &quot;Test.allTheThings() T-Shirt (Red)&quot; as products in a list" time="0"/>
-  <testcase classname="Scenario: Checkout product" name="Scenario: Checkout product" time="0.14"/>
+  <testcase classname="Scenario: Checkout product" name="When User sort product by &quot;Name (Z to A)&quot; as sortBy" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="When User checkout &quot;Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)&quot; as products to cart" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User already on checkout page" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User verify that &quot;Sauce Labs Onesie,Test.allTheThings() T-Shirt (Red)&quot; as products in a list" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="When User remove  &quot;Test.allTheThings() T-Shirt (Red)&quot; as products in a list" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="And User click button checkout" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User already on check out info page" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="When User submit &quot;Suci&quot; as first name, &quot;Maharani&quot; as last name, &quot;11450&quot; as postal code in form checkout information" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User already on checkout summary page" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User verify item total, tax, total on checkout summary page" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="And User click button finish" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Then User already in checkout complete page" time="0"/>
+  <testcase classname="Scenario: Checkout product" name="Scenario: Checkout product" time="0.113"/>
 </testsuite>
